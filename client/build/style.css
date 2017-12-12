@@ -1,0 +1,44 @@
+body {
+  background-image: url('./images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: cursive;
+  text-align: center;
+  color: white;
+  font-size: 60px;
+}
+
+button, input {
+  font-size: 22px;
+  margin: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+li {
+  font-family: monospace;
+  color: white;
+  font-style: oblique;
+  font-size: 18px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}

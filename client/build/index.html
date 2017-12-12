@@ -9,22 +9,23 @@
   <title>Christmas Songs</title>
 </head>
 <body>
+  <h1>Christmas Song List</h1>
   <div class="container">
     <form method="POST" action="/songs">
-      <input type="text" placeholder="title" name="title">
-      <input type="text" placeholder="artist" name="artist">
+      <input type="text" placeholder="Title" name="title">
+      <input type="text" placeholder="Artist" name="artist">
       <button type="submit">Submit</button>
     </form>
     <form action="/delete" method="POST">
-      <button id="deleteButton" type="submit">Delete All</button>
+      <button type="submit">Delete</button>
     </form>
-  </div>
-  <div class="image_container">
-    <!-- <img id="yoda-pic" src="/images/yoda.png" /> -->
   </div>
   <div class="list-container">
     <ul id="songs">
     </ul>
+  </div>
+  <div class="image-container">
+    <img id="snowman" src="/images/animated-snowman.gif"/>
   </div>
 </body>
 </html>
