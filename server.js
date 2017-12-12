@@ -28,7 +28,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/songs', function(req, res){
-  db.collection('christmas_songs').find().toArray(function(err, results){
+  db.collection('songs').find().toArray(function(err, results){
     if(err){
       return console.log(err);
     }
@@ -37,11 +37,16 @@ app.get('/songs', function(req, res){
 });
 
 app.post('/songs', function(req, res){
-  db.collection('christmas_songs').save(req.body, function(err, result){
+  db.collection('songs').save(req.body, function(err, result){
     if(err){
       return console.log(err);
     }
     console.log("Saved to database");
     res.redirect('/');
   });
+});
+
+app.post('/delete', function(req, res){
+  db.collection('songs').remove();
+  res.redirect('/');
 });
