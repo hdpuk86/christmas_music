@@ -2,6 +2,7 @@ var express = require('express');
 var parser = require('body-parser');
 var app = express();
 var path = require('path');
+var ObjectId = require('mongodb').ObjectId;
 
 
 app.use(parser.json());
@@ -48,5 +49,10 @@ app.post('/songs', function(req, res){
 
 app.post('/delete', function(req, res){
   db.collection('songs').remove();
+  res.redirect('/');
+});
+
+app.post('/delete/:id', function(req, res){
+  db.collection('songs').deleteOne({_id: ObjectId(req.params.id)});
   res.redirect('/');
 });

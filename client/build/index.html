@@ -12,12 +12,12 @@
   <h1>Christmas Song List</h1>
   <div class="container">
     <form method="POST" action="/songs">
-      <input type="text" placeholder="Title" name="title">
-      <input type="text" placeholder="Artist" name="artist">
+      <input type="text" placeholder="Title" name="title" required>
+      <input type="text" placeholder="Artist" name="artist" required>
       <button type="submit">Submit</button>
     </form>
     <form action="/delete" method="POST">
-      <button type="submit">Delete</button>
+      <button id="delete-all" type="submit">Delete All!</button>
     </form>
   </div>
   <div class="list-container">
